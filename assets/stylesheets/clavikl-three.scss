@@ -1,0 +1,16 @@
+.clavikl-three-page {
+  background: #f6f0fc;
+  min-height: 80vh;
+  .clavikl-three-box {
+    margin: 32px auto;
+    background: #23284a;
+    border-radius: 12px;
+    max-width: 400px;
+    padding: 36px 20px;
+    color: #eedaff;
+    box-shadow: 0 8px 24px #6b00a21e;
+    text-align: center;
+    h2 { color: #e0adff; }
+    p { color: #b292bf; }
+  }
+}
