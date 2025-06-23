@@ -1,0 +1,15 @@
+.clavikl-two-page {
+  background: #f0f6fc;
+  min-height: 80vh;
+  .clavikl-two-box {
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 10px;
+    max-width: 400px;
+    padding: 40px 24px;
+    box-shadow: 0 3px 12px #4585a499;
+    text-align: center;
+    h2 { color: #1877ad; }
+    p { color: #666; }
+  }
+}
