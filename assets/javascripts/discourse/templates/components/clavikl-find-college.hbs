@@ -1,0 +1,56 @@
+<div class="user-shares-container">
+  {{#each this.userShares as |share|}}
+    <div class="share-tile">
+      <div class="share-tile-header">
+        <img src={{share.userDp}} alt={{share.userName}} class="share-tile-user-dp">
+        <div class="share-tile-user-info">
+          <span class="share-tile-user-name">{{share.userName}}</span>
+          <img src={{share.collegeLogo}} alt={{share.collegeName}} class="share-tile-college-logo">
+        </div>
+      </div>
+      <div class="share-tile-question">{{share.question}}</div>
+    </div>
+  {{/each}}
+</div>
+
+<div class="main-content">
+  <div class="container">
+    <div class="logo-container">
+      <a href="/">
+        <img src="https://clavikl.com/uploads/default/original/1X/6846d22ea09acec3bb934fe4c7af082d2740d431.jpeg" alt="Clavikl Logo" class="logo">
+      </a>
+    </div>
+    <div class="search-box">
+      <i class="fas fa-search search-icon"></i>
+      <input
+        type="text"
+        aria-label="Search for your college"
+        aria-autocomplete="list"
+        aria-controls="collegeList"
+        {{on "focus" this.handleFocus}}
+        {{on "blur" this.handleBlur}}
+        value={{this.search}}
+        placeholder={{this.placeholder}}
+        {{on "input" this.handleInput}}
+      >
+      {{#if this.showList}}
+        <ul id="collegeList" role="listbox">
+          {{#each this.results as |college|}}
+            <li role="option" {{on "mousedown" (fn this.selectCollege college)}}>{{college}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    </div>
+    <div class="message" aria-live="polite">
+      {{{this.message}}}
+    </div>
+    <div class="button-container">
+      <a href="/" class="action-button">Space</a>
+      <a href="/dose.html" class="action-button">Dose</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Clavikl. All rights reserved.
+</footer>
